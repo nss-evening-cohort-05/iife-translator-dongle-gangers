@@ -2,24 +2,23 @@
 var languageChooser = document.getElementById("radioButtons");
 
 // Up to us to make these connections; no boilerplate
+var translateButton = document.getElementById("translateButton");
 var translator = ["Wookie", "French", "Korean", "Spanish"];
 var translationArray = [];
 var outputString = document.getElementById("translatedText");
 
 
-translator.addEventListener("change", function(event) {
+translateButton.addEventListener("click", function(event) {
+		// console.log(languageChooser.children);
+	for (var i = 0; i < languageChooser.children.length; i++) {
+		// console.log(languageChooser.children[i].checked);
+		if (languageChooser.children[i].checked) {
+			console.log("the chosen one: ", languageChooser.children[i].className)
+		}
+	}
+});
 
-  // Get the selected language from the DOM
-  selectedLanguage = event.target.value;
 
-  // get the translation
-  // 
-  translationArray = DongleTranslator.translateTo(selectedLanguage);
-
-  // outputString.innerHTML = translationArray
-  // var translation = "";
-    	// for (var i in frenchWords) {
-     //  		translation += frenchWords + " ";
-     // 	 }
-     //    return translation;
-}
+// if return French then call augmenter that returns French array, 
+// concatnate the array, 
+// and then write it to DOM
