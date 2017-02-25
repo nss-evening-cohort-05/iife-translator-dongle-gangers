@@ -1,1 +1,2 @@
-// Up to us to make these connections; no boilerplate
+// This reference is for the language selector radios
+var languageChooser = document.getElementById("radioButtons");
