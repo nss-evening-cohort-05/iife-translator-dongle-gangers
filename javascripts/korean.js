@@ -1,4 +1,5 @@
  var DongleTranslator = (function(oldDongleTranslator){
+ 	
     var koreanWords = {
     	"my": "나의", 
     	"very": "대단히", 
@@ -10,7 +11,9 @@
     	"noodles": "국수"
     };
 
-    oldDongleTranslator.translateTo = function(korean) {
+
+    oldDongleTranslator.translateToKorean = function() {
+
     	return koreanWords;
     };
 

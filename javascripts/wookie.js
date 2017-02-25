@@ -1,23 +1,22 @@
-var translation = (function(oldDongleTranslator){
+var DongleTranslator = (function(oldDongleTranslator) {
 
-	var wookie = {"my": "wrrhwrwwhw", 
-				  "very": "raaaaaahhgh",
-				  "elegant": "aarrragghuuhw",
-				  "mother": "raaaaaahhgh",
-				  "just": "huurh",
-				  "served": "hnnnhrrhhh",
-				  "us": "uughghhhgh",
-				  "noodles": "huuguughghg"}
-}
-	oldDongleTranslator.translateTo =function(){		
-		return wookie
-	}
+    var wookie = {
+        "my": "wrrhwrwwhw",
+        "very": "raaaaaahhgh",
+        "elegant": "aarrragghuuhw",
+        "mother": "raaaaaahhgh",
+        "just": "huurh",
+        "served": "hnnnhrrhhh",
+        "us": "uughghhhgh",
+        "noodles": "huuguughghg"
 
-	
+oldDongleTranslator.translateToWookie = function() {
+    return wookie
+};
 
 
- return oldDongleTranslator;
- })(dongleTranslator || {});
+return oldDongleTranslator;
+})(DongleTranslator || {});
 
 
 
