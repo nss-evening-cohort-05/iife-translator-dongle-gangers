@@ -9,7 +9,6 @@ var DongleTranslator = (function(oldDongleTranslator) {
         "served": "hnnnhrrhhh",
         "us": "uughghhhgh",
         "noodles": "huuguughghg"
-}
 
 oldDongleTranslator.translateToWookie = function() {
     return wookie

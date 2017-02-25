@@ -11,7 +11,9 @@
     	"noodles": "국수"
     };
 
+
     oldDongleTranslator.translateToKorean = function() {
+
     	return koreanWords;
     };
 
