@@ -10,7 +10,7 @@
     	"noodles" : "fideos"
     }
 
-    oldDongleTranslator.translateTo = function(){
+    oldDongleTranslator.translateToSpanish = function(){
         return spanish;
     }
 

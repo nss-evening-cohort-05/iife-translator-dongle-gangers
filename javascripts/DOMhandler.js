@@ -8,21 +8,53 @@ var translationArray = [];
 var outputString = document.getElementById("translatedText");
 
 
+//***************************************
+// function creates output string
+// Input Parameter :: Translation Array returned from augmentor function
+// RETURNS output string
+//***************************************
+function concatenateArray(arrayToJoin) {
+
+    var tempStr = "";
+
+    for (var i in arrayToJoin) {
+        tempStr += arrayToJoin[i] + " ";
+    }
+    return tempStr;
+};
+
+
+
+//***************************************
+// function outputs translated string to the DOM
+// Input Parameter :: concatenate string from translation array
+// OUTPUTS TO DOME
+//***************************************
+function outputToDOM (str) {
+	console.log("str returned from augmentor, to be parsed :: ", str);
+	outputString.innerHTML = str;
+}
+
+
+//***************************************
+// Event Listener on <Make It So!> button
+//***************************************
 translateButton.addEventListener("click", function(event) {
-		// console.log(languageChooser.children);
 	for (var i = 0; i < languageChooser.children.length; i++) {
-		// console.log(languageChooser.children[i].checked);
 		if (languageChooser.children[i].checked) {
-			console.log("the chosen one: ", languageChooser.children[i].className)
+console.log("the chosen one: ", languageChooser.children[i].className)
 			if (languageChooser.children[i].className === "French") {
 				translationArray = DongleTranslator.translateToFrench();
-				console.log("This should be the French array", translationArray);
+console.log("translationArray: ", translationArray);
+				outputToDOM(concatenateArray(translationArray));
+
 			}
 		}
 	}
 });
 
 
-// if return French then call augmenter that returns French array, 
-// concatnate the array, 
-// and then write it to DOM
+
+
+
+
