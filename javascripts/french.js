@@ -1,14 +1,14 @@
- var SandwhichMaker = (function(oldSandWhichMaker){
-    var meatz = {"cat": 25.50, "chicken": 0.50, "ham": 1.00}
+ var DongleTranslator = (function(oldDongleTranslator){
+    var frenchWords = {"my": "ma", "very": "très", "elegant": "élégant", "mother": "mère", "just": "à", "served": "sert", "us": "nous", "noodles": "des nouilles"};
+    // word order :: ma mère très élégant à seulement nous sert des nouilles
 
-    oldSandWhichMaker.getMeatz = function(){
-        return meatz;
-    };
-
-    //input "cat"  ===> 25.50
-    oldSandWhichMaker.getMeatPrice = function(meat){
-        return meatz[meat]
+    oldDongleTranslator.translateToFrench = function(french){
+    	var translation = "";
+    	for (var i in frenchWords) {
+      		translation += frenchWords + " ";
+     	 }
+        return translation;
     }
 
-    return oldSandWhichMaker;
-})(SandwhichMaker || {});
+    return oldDongleTranslator;
+})(DongleTranslator || {});
