@@ -1,14 +1,18 @@
- var SandwhichMaker = (function(oldSandWhichMaker){
-    var meatz = {"cat": 25.50, "chicken": 0.50, "ham": 1.00}
-
-    oldSandWhichMaker.getMeatz = function(){
-        return meatz;
-    };
-
-    //input "cat"  ===> 25.50
-    oldSandWhichMaker.getMeatPrice = function(meat){
-        return meatz[meat]
+ var DongleTranslator = (function(oldDongleTranslator){
+    var spanish = {
+    	"my" : "mi",
+    	"very" : "muy",
+    	"elegant" : "elegante",
+    	"mother" : "madre",
+    	"just" : "acaba de",
+    	"served" : "servir",
+    	"us" : "nos",
+    	"noodles" : "fideos"
     }
 
-    return oldSandWhichMaker;
-})(SandwhichMaker || {});
+    oldDongleTranslator.translateTo = function(){
+        return spanish;
+    }
+
+    return oldDongleTranslator;
+})(DongleTranslator || {});

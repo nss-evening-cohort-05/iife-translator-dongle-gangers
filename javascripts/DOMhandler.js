@@ -1,3 +1,6 @@
+// This reference is for the language selector radios
+var languageChooser = document.getElementById("radioButtons");
+
 // Up to us to make these connections; no boilerplate
 var translator = ["Wookie", "French", "Korean", "Spanish"];
 var translationArray = [];
@@ -19,6 +22,4 @@ translator.addEventListener("change", function(event) {
      //  		translation += frenchWords + " ";
      // 	 }
      //    return translation;
-
 }
-
