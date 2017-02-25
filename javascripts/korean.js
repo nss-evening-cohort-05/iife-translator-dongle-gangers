@@ -1,4 +1,5 @@
  var DongleTranslator = (function(oldDongleTranslator){
+ 	
     var koreanWords = {
     	"my": "나의", 
     	"very": "대단히", 
