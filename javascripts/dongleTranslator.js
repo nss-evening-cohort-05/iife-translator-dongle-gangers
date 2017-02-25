@@ -1,9 +1,6 @@
-var SandwhichMaker = (function(){
-    var totalPrice = 0;
+var DongleTranslator = (function(){
+    var finalTranslation = "";
 
-    return {
-        getPrice : function(){
-            return totalPrice;
-        }
-    };
-})();
+    return finalTranslation;
+
+})(DongleTranslator || {});
