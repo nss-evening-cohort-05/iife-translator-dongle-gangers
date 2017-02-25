@@ -2,24 +2,59 @@
 var languageChooser = document.getElementById("radioButtons");
 
 // Up to us to make these connections; no boilerplate
+var translateButton = document.getElementById("translateButton");
 var translator = ["Wookie", "French", "Korean", "Spanish"];
 var translationArray = [];
 var outputString = document.getElementById("translatedText");
 
 
-translator.addEventListener("change", function(event) {
+//***************************************
+// function creates output string
+// Input Parameter :: Translation Array returned from augmentor function
+// RETURNS output string
+//***************************************
+function concatenateArray(arrayToJoin) {
 
-  // Get the selected language from the DOM
-  selectedLanguage = event.target.value;
+    var tempStr = "";
 
-  // get the translation
-  // 
-  translationArray = DongleTranslator.translateTo(selectedLanguage);
+    for (var i in arrayToJoin) {
+        tempStr += arrayToJoin[i] + " ";
+    }
+    return tempStr;
+};
 
-  // outputString.innerHTML = translationArray
-  // var translation = "";
-    	// for (var i in frenchWords) {
-     //  		translation += frenchWords + " ";
-     // 	 }
-     //    return translation;
+
+
+//***************************************
+// function outputs translated string to the DOM
+// Input Parameter :: concatenate string from translation array
+// OUTPUTS TO DOME
+//***************************************
+function outputToDOM (str) {
+	console.log("str returned from augmentor, to be parsed :: ", str);
+	outputString.innerHTML = str;
 }
+
+
+//***************************************
+// Event Listener on <Make It So!> button
+//***************************************
+translateButton.addEventListener("click", function(event) {
+	for (var i = 0; i < languageChooser.children.length; i++) {
+		if (languageChooser.children[i].checked) {
+console.log("the chosen one: ", languageChooser.children[i].className)
+			if (languageChooser.children[i].className === "French") {
+				translationArray = DongleTranslator.translateToFrench();
+console.log("translationArray: ", translationArray);
+				outputToDOM(concatenateArray(translationArray));
+
+			}
+		}
+	}
+});
+
+
+
+
+
+

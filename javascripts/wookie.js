@@ -9,15 +9,15 @@ var translation = (function(oldDongleTranslator){
 				  "us": "uughghhhgh",
 				  "noodles": "huuguughghg"}
 }
-	oldDongleTranslator.translateToWookie =function(){		
+	oldDongleTranslator.translateToWookie = function(){		
 		return wookie
 	}
 
 	
 
 
- return oldDongleTranslator;
- })(dongleTranslator || {});
+    return oldDongleTranslator;
+})(DongleTranslator || {});
 
 
 
