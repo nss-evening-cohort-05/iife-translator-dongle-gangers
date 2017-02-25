@@ -9,12 +9,8 @@ var translation = (function(oldDongleTranslator){
 				  "us": "uughghhhgh",
 				  "noodles": "huuguughghg"}
 }
-	oldDongleTranslator.translateToWookie =function(wookie){
-		var translation = ""
-		for (var i in wookie) {
-			Translation += wookie + " ";
-		}
-		return translation;
+	oldDongleTranslator.translateToWookie =function(){		
+		return wookie
 	}
 
 	
