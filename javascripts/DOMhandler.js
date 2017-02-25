@@ -1,10 +1,9 @@
+
 // This reference is for the language selector radios
-var languageChooser = document.getElementsByClassName("radioButtons");
+var languageChooser = document.getElementById("radioButtons");
 
 // Up to us to make these connections; no boilerplate
-
 var translateButton = document.getElementById("translateButton");
-
 var translator = ["Wookie", "French", "Korean", "Spanish"];
 var translationArray = [];
 var outputString = document.getElementById("translatedText");
@@ -58,3 +57,5 @@ translateButton.addEventListener("click", function(event) {
 		}
 		}
 });
+
+
