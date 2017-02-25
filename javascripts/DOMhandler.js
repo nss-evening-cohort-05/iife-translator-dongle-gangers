@@ -1,25 +1,71 @@
 // This reference is for the language selector radios
-var languageChooser = document.getElementById("radioButtons");
+var languageChooser = document.getElementsByClassName("radioButtons");
 
 // Up to us to make these connections; no boilerplate
+var translateBtn = document.getElementById("translateButton");
 var translator = ["Wookie", "French", "Korean", "Spanish"];
 var translationArray = [];
 var outputString = document.getElementById("translatedText");
 
 
-translator.addEventListener("change", function(event) {
 
-  // Get the selected language from the DOM
-  selectedLanguage = event.target.value;
 
-  // get the translation
-  // 
-  translationArray = DongleTranslator.translateTo(selectedLanguage);
+//*************************************
+// Read Radio Button
+// Radio Button value tied to which augmentor to call
+//*************************************
 
-  // outputString.innerHTML = translationArray
-  // var translation = "";
-    	// for (var i in frenchWords) {
-     //  		translation += frenchWords + " ";
-     // 	 }
-     //    return translation;
-}
+
+
+
+
+
+//*************************************
+// Create the output string from the returned array
+//*************************************
+
+
+
+
+
+
+
+
+
+//*************************************
+// Output the returned array to the DOM
+//*************************************
+
+
+
+
+
+
+
+
+
+//*************************************
+// Event Handler on Get Translation
+//*************************************
+translateBtn.addEventListener("click", function(event) {
+// console.log("event listener", event);
+
+	// read selected language from radio buttons
+console.log("languageChooser :: ", languageChooser);
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

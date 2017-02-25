@@ -1,29 +1,47 @@
-# Language Translator
+# NSS Language Translator Group Exercise
 
-## Instructions
+### Project Description 
+This project created an IIFE Javascript object that translates an English phrase, <em>my very elegant mother just served us noodles</em> into another language: <em>French</em>, <em>Korean</em>, <em>Spanish</em>, or <em>Wookie</em>. Each member of the team built a JavaScript IIFE module that converted the text into one of the translation languages.
 
-Represent a small bilingual lexicon as a Javascript object (see example below) and use it to translate a holiday card message from English into another language. Each member of the team will build a JavaScript module that will convert text entered into an input field to the language that they choose.
+The user interface is minimally styled css. 
+<!-- ![Language Translator Screengrab](https ... ) -->
 
-`{"merry":"god", "christmas":"jul", "and":"och", "happy":"gott", "new":"nytt", "year":"år"}`
+1. Created a single Github repository that team members collaborated on.
+2. Created this [trello](https://trello.com/b/f5y8hPXe/translator) that was used for team planning.
+3. Each team member chose a language.
+4. Wrote one HTML file, `index.html`, that has 
+- a textarea
+- a select element (radio buttons) with an option for each language
+- a Translate button (labeled `Make it so!`)
+- and an empty DOM element into which the translated text will be inserted
+5. Chose a single variable name, `DongleTranslator`, that holds all of the logic for the application. 
+6. Each team member created one JavaScript file that contains one IIFE, each of which is an augmentor to `dongleTranslator.js` and to all the others. 
+7. The lexicon utilizes private variables that cannot be accessed by any other team member's module except through an accessor method.
+8. Each IIFE exposes, in its public interface, a method named `translateToXXX(Language)` that accepts a single argument. The method returns the translated text.
+9. The team created an extra JavaScript file, `DOMhandler.js`, that handles interacting with the form elements and determines which method will be called to perform the selected translation.
 
-This is Swedish, so please choose other languages. You can add as many words/translations as you wish so that the user can write more complex holiday cards.
 
-1. One team member creates a Github project and adds the others as collaborators.
-1. Each team member picks a language.
-1. Your project should have one HTML file that has a textarea, a select element with an option for each language, a button with a label of "Translate", and an empty DOM element into which the translated text will be inserted.
-1. The team must discuss and choose a single variable name that will hold all of the logic that the team creates (i.e. see the Sedan example above).
-1. Each team member will create one JavaScript file that contains one IIFE. Each teammate's IIFE will augment the other teammates' IIFEs.
-1. The lexicon should be a private variable that cannot be accessed by the other team member's module except through an accessor (getter) method.
-1. Each IIFE should expose, in its public interface, a method named `translateTo{Language}` (e.g. `translateToSpanish` or `translateToFinnish`) that accepts a single argument. That argument's value should be the text entered in by the user. The method should return the translated text.
-1. The team should create an extra JavaScript file that handles interacting with the form elements and determining which method should be called.
+### Technologies Used
+- html
+- css
+- javascript
 
-> **Optional Bonus 1**
->
-> Find a way to write your IIFEs so that it doesn't matter whose module gets created first.
 
----
+### How To View The Language Translator Application
+#### (Node must be installed on your machine):
+```
+git clone https://github.com/nss-evening-cohort-05/iife-translator-dongle-gangers.git
+cd iife-translator-dongle-gangers
+npm install http-server -g
+http-server -p 8080
+```
 
-> **Optional Bonus 2**
->
-> In addition to inserting the translated text into the HTML document, have the browser read the translated text to the user.
->
+This will show in your browser at: `http://localhost:8080`
+
+### Contributors
+[Mitchell Blom](https://github.com/mitchellblom)
+[Sharon Smith](https://github.com/SMITHsharon)
+[Heather Thacker](https://github.com/hhthacker)
+[Craig Wilkosz](https://github.com/cwilkosz)
+
+

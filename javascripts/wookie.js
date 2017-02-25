@@ -9,7 +9,7 @@ var translation = (function(oldDongleTranslator){
 				  "us": "uughghhhgh",
 				  "noodles": "huuguughghg"}
 }
-	oldDongleTranslator.translateToWookie =function(){		
+	oldDongleTranslator.translateTo =function(){		
 		return wookie
 	}
 
