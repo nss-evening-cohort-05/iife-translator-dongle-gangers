@@ -7,7 +7,6 @@ var translator = ["Wookie", "French", "Korean", "Spanish"];
 var translationArray = [];
 var outputString = document.getElementById("translatedText");
 
-
 //***************************************
 // function creates output string
 // Input Parameter :: Translation Array returned from augmentor function
@@ -54,14 +53,9 @@ translateButton.addEventListener("click", function(event) {
 			}
 // console.log("translationArray: ", translationArray);
 				outputToDOM(concatenateArray(translationArray));
-
-			}
+		}
 		}
 });
-
-			// else {
-			// 	alert("Please select an available language.");
-			// }
 
 
 

@@ -1,4 +1,4 @@
-var translation = (function(oldDongleTranslator) {
+var DongleTranslator = (function(oldDongleTranslator) {
 
     var wookie = {
         "my": "wrrhwrwwhw",
@@ -9,7 +9,6 @@ var translation = (function(oldDongleTranslator) {
         "served": "hnnnhrrhhh",
         "us": "uughghhhgh",
         "noodles": "huuguughghg"
-    }
 }
 
 oldDongleTranslator.translateToWookie = function() {
