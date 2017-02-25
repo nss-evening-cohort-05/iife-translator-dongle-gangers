@@ -1,4 +1,5 @@
-# NSS Language Translator Group Exercise
+# NSS Language Translator 
+## Group Exercise
 
 ### Project Description 
 This project created an IIFE Javascript object that translates an English phrase, <em>my very elegant mother just served us noodles</em> into another language: <em>French</em>, <em>Korean</em>, <em>Spanish</em>, or <em>Wookie</em>. Each member of the team built a JavaScript IIFE module that converted the text into one of the translation languages.
