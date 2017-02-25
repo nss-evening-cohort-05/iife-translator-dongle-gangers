@@ -6,14 +6,16 @@
 <body>
 
 
-<!--///////////////////////// RADIO BUTTONS PER LANGUAGE //////////////////////////////////-->
+<!--///////////////////////// HEADINGS AND ORIGINAL SENTENCE //////////////////////////////////-->
 
 	<div>
 		<h4>Sentence for Mothers Day and Chinese New Year:</h4>
 		<p>"My very elegant mother just served us noodles."</p>
 	</div>
 
-	<div>
+<!--///////////////////////// RADIO BUTTONS PER LANGUAGE //////////////////////////////////-->
+
+	<div id="radioButtons">
 		<h4>Translate to...</h4>
 		<input type="radio" name="language" value="Wookie">Wookie</input>
 		<input type="radio" name="language" value="French">French</input>
@@ -21,9 +23,13 @@
 		<input type="radio" name="language" value="Spanish">Spanish</input>
 	</div>
 
-	<button>Make it so!</button>
+<!--///////////////////////// TRANSLATE BUTTON //////////////////////////////////-->
 
-	<textarea></textarea>
+	<button id="translateButton">Make it so!</button>
+
+<!--///////////////////////// DOM ELEMENT //////////////////////////////////-->
+
+	<textarea id="transatedText"></textarea>
 
 <!--///////////////////////// SCRIPTS //////////////////////////////////-->
 
