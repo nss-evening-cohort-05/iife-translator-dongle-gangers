@@ -1,0 +1,1 @@
+# spa-group-iife-translator
