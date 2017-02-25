@@ -1,4 +1,4 @@
-var Translation = (function(oldDongleTranslator)){
+var translation = (function(oldDongleTranslator){
 
 	var wookie = {"my": "wrrhwrwwhw", 
 				  "very": "raaaaaahhgh",
@@ -9,8 +9,12 @@ var Translation = (function(oldDongleTranslator)){
 				  "us": "uughghhhgh",
 				  "noodles": "huuguughghg"}
 }
-	oldDongleTranslator.translateToWookie =function(){
-		return wookie
+	oldDongleTranslator.translateToWookie =function(wookie){
+		var translation = ""
+		for (var i in wookie) {
+			Translation += wookie + " ";
+		}
+		return translation;
 	}
 
 	
@@ -18,7 +22,6 @@ var Translation = (function(oldDongleTranslator)){
 
  return oldDongleTranslator;
  })(dongleTranslator || {});
-
 
 
 
