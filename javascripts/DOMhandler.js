@@ -14,6 +14,10 @@ translateButton.addEventListener("click", function(event) {
 		// console.log(languageChooser.children[i].checked);
 		if (languageChooser.children[i].checked) {
 			console.log("the chosen one: ", languageChooser.children[i].className)
+			if (languageChooser.children[i].className === "French") {
+				translationArray = DongleTranslator.translateToFrench();
+				console.log("This should be the French array", translationArray);
+			}
 		}
 	}
 });
