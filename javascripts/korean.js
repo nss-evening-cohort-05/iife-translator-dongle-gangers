@@ -1,14 +1,18 @@
- var SandwhichMaker = (function(oldSandWhichMaker){
-    var meatz = {"cat": 25.50, "chicken": 0.50, "ham": 1.00}
-
-    oldSandWhichMaker.getMeatz = function(){
-        return meatz;
+ var DongleTranslator = (function(oldDongleTranslator){
+    var koreanWords = {
+    	"my": "나의", 
+    	"very": "대단히", 
+    	"elegant": "우아한", 
+    	"mother": " 어머니", 
+    	"just": "다만", 
+    	"served": "봉사 한", 
+    	"us": "우리", 
+    	"noodles": "국수"
     };
 
-    //input "cat"  ===> 25.50
-    oldSandWhichMaker.getMeatPrice = function(meat){
-        return meatz[meat]
-    }
+    oldDongleTranslator.translateTo = function() {
+    	return koreanWords;
+    };
 
-    return oldSandWhichMaker;
-})(SandwhichMaker || {});
+    return oldDongleTranslator;
+})(DongleTranslator || {});
