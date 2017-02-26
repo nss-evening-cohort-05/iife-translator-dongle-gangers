@@ -16,12 +16,12 @@ var outputString = document.getElementById("translatedText");
 function concatenateArray(arrayToJoin) {
 
     var tempStr = "";
-
     for (var i in arrayToJoin) {
         tempStr += arrayToJoin[i] + " ";
     }
     return tempStr;
 };
+
 
 //***************************************
 // function outputs translated string to the DOM
@@ -29,33 +29,62 @@ function concatenateArray(arrayToJoin) {
 // OUTPUTS TO DOME
 //***************************************
 function outputToDOM (str) {
-	// console.log("str returned from augmentor, to be parsed :: ", str);
+
+// console.log("str returned from augmentor, to be parsed :: ", str);
 	outputString.innerHTML = str;
+
+	// reset radio buttons
+	// if this is in the file, it messes up how the event handler and alert works
+	// I want to ask Zoe/Callan/Lauren about Why? 
+	// Then we can take it out ... 
+
+	// var radioButtonDisplay = '<div id="radioButtons">';
+	// radioButtonDisplay += '<input type="radio" name="language" class="French">French</input>';
+	// radioButtonDisplay += '<input type="radio" name="language" class="Korean">Korean</input>';
+	// radioButtonDisplay += '<input type="radio" name="language" class="Spanish">Spanish</input>';
+	// radioButtonDisplay += '<input type="radio" name="language" class="Wookie">Wookie</input>';
+	// radioButtonDisplay += '</div>';
+	// languageChooser.innerHTML = radioButtonDisplay;
 }
+
 
 //***************************************
 // Event Listener on <Make It So!> button
 //***************************************
 translateButton.addEventListener("click", function(event) {
+
+	var translated = false;
 	for (var i = 0; i < languageChooser.children.length; i++) {
+		
 		if (languageChooser.children[i].checked) {
+
 // console.log("the chosen one: ", languageChooser.children[i].className)
 			if (languageChooser.children[i].className === "French") {
 				translationArray = DongleTranslator.translateToFrench();
+				translated = true;
 			}
 			if (languageChooser.children[i].className === "Korean") {
 				translationArray = DongleTranslator.translateToKorean();
+				translated = true;
 			}
 			if (languageChooser.children[i].className === "Spanish") {
 				translationArray = DongleTranslator.translateToSpanish();
+				translated = true;
 			}
 			if (languageChooser.children[i].className === "Wookie") {
 				translationArray = DongleTranslator.translateToWookie();
+				translated = true;
 			}
 // console.log("translationArray: ", translationArray);
 				outputToDOM(concatenateArray(translationArray));
 		}
-		}
-});
+	}
+
+	if (!translated) {
+		alert("You have to choose a language for translation!");
+	}
+})
+
+
 
 
