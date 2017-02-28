@@ -9,6 +9,10 @@ var translationArray = [];
 var outputString = document.getElementById("translatedText");
 var voicePlay = document.getElementById("audioPlay");
 
+function showPicOnPlay() {
+	alert("An image will appear here depending on the language selected");
+};
+
 //***************************************
 // function creates output string
 // Input Parameter :: Translation Array returned from augmentor function
@@ -23,7 +27,6 @@ function concatenateArray(arrayToJoin) {
     return tempStr;
 };
 
-
 //***************************************
 // function outputs translated string to the DOM
 // Input Parameter :: concatenate string from translation array
@@ -31,10 +34,16 @@ function concatenateArray(arrayToJoin) {
 //***************************************
 function outputToDOM (str) {
 
-// console.log("str returned from augmentor, to be parsed :: ", str);
 	outputString.innerHTML = str;
 
-	voicePlay.innerHTML = `<input onclick='responsiveVoice.speak("${str}");' type='button' value='Play' />`
+	voicePlay.innerHTML = `
+		<input onclick='responsiveVoice.speak("${str}");'
+		type='button' value='Play' id="picOnPlayButton" />
+		`
+
+	var picOnPlay = document.getElementById("picOnPlayButton")
+	picOnPlay.addEventListener("click", showPicOnPlay);
+	
 };
 
 
@@ -48,7 +57,6 @@ translateButton.addEventListener("click", function(event) {
 		
 		if (languageChooser.children[i].checked) {
 
-// console.log("the chosen one: ", languageChooser.children[i].className)
 			if (languageChooser.children[i].className === "French") {
 				translationArray = DongleTranslator.translateToFrench();
 				translated = true;
@@ -65,7 +73,7 @@ translateButton.addEventListener("click", function(event) {
 				translationArray = DongleTranslator.translateToWookie();
 				translated = true;
 			}
-// console.log("translationArray: ", translationArray);
+
 				outputToDOM(concatenateArray(translationArray));
 		}
 	}
