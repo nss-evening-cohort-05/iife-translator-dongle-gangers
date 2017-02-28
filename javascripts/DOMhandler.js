@@ -10,7 +10,7 @@ var outputString = document.getElementById("translatedText");
 var voicePlay = document.getElementById("audioPlay");
 
 function showPicOnPlay() {
-	alert("An image will appear here depending on the language selected");
+	voicePlay.innerHTML = `<img src="readingrainbow.gif" alt="Random Images">`
 };
 
 //***************************************
@@ -35,18 +35,11 @@ function concatenateArray(arrayToJoin) {
 function outputToDOM (str) {
 
 	outputString.innerHTML = str;
-	voicePlay.innerHTML = `<input onclick='responsiveVoice.speak("${str}");' type='button' value=' 🔊 Play' class='audioplay' />`
-
-	voicePlay.innerHTML = `
-		<input onclick='responsiveVoice.speak("${str}");'
-		type='button' value='Play' id="picOnPlayButton" />
-		`
+	voicePlay.innerHTML = `<input onclick='responsiveVoice.speak("${str}");' type='button' value=' 🔊 Play' class='audioplay' id='picOnPlayButton' />`
 
 	var picOnPlay = document.getElementById("picOnPlayButton")
 	picOnPlay.addEventListener("click", showPicOnPlay);
 	
-	voicePlay.innerHTML = `<input onclick='responsiveVoice.speak("${str}");' type='button' value='Play' />`
-
 };
 
 
