@@ -7,6 +7,7 @@ var translateButton = document.getElementById("translateButton");
 var translator = ["Wookie", "French", "Korean", "Spanish"];
 var translationArray = [];
 var outputString = document.getElementById("translatedText");
+var voicePlay = document.getElementById("audioPlay");
 
 //***************************************
 // function creates output string
@@ -32,20 +33,9 @@ function outputToDOM (str) {
 
 // console.log("str returned from augmentor, to be parsed :: ", str);
 	outputString.innerHTML = str;
+	voicePlay.innerHTML = `<input onclick='responsiveVoice.speak("${str}");' type='button' value='Play' />`
+};
 
-	// reset radio buttons
-	// if this is in the file, it messes up how the event handler and alert works
-	// I want to ask Zoe/Callan/Lauren about Why? 
-	// Then we can take it out ... 
-
-	// var radioButtonDisplay = '<div id="radioButtons">';
-	// radioButtonDisplay += '<input type="radio" name="language" class="French">French</input>';
-	// radioButtonDisplay += '<input type="radio" name="language" class="Korean">Korean</input>';
-	// radioButtonDisplay += '<input type="radio" name="language" class="Spanish">Spanish</input>';
-	// radioButtonDisplay += '<input type="radio" name="language" class="Wookie">Wookie</input>';
-	// radioButtonDisplay += '</div>';
-	// languageChooser.innerHTML = radioButtonDisplay;
-}
 
 
 //***************************************
@@ -83,8 +73,4 @@ translateButton.addEventListener("click", function(event) {
 	if (!translated) {
 		alert("You have to choose a language for translation!");
 	}
-})
-
-
-
-
+});
