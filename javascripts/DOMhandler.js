@@ -35,6 +35,7 @@ function concatenateArray(arrayToJoin) {
 function outputToDOM (str) {
 
 	outputString.innerHTML = str;
+	voicePlay.innerHTML = `<input onclick='responsiveVoice.speak("${str}");' type='button' value=' 🔊 Play' class='audioplay' />`
 
 	voicePlay.innerHTML = `
 		<input onclick='responsiveVoice.speak("${str}");'
@@ -44,6 +45,8 @@ function outputToDOM (str) {
 	var picOnPlay = document.getElementById("picOnPlayButton")
 	picOnPlay.addEventListener("click", showPicOnPlay);
 	
+	voicePlay.innerHTML = `<input onclick='responsiveVoice.speak("${str}");' type='button' value='Play' />`
+
 };
 
 
