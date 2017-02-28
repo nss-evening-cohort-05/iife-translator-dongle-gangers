@@ -32,19 +32,6 @@ function outputToDOM (str) {
 
 // console.log("str returned from augmentor, to be parsed :: ", str);
 	outputString.innerHTML = str;
-
-	// reset radio buttons
-	// if this is in the file, it messes up how the event handler and alert works
-	// I want to ask Zoe/Callan/Lauren about Why? 
-	// Then we can take it out ... 
-
-	// var radioButtonDisplay = '<div id="radioButtons">';
-	// radioButtonDisplay += '<input type="radio" name="language" class="French">French</input>';
-	// radioButtonDisplay += '<input type="radio" name="language" class="Korean">Korean</input>';
-	// radioButtonDisplay += '<input type="radio" name="language" class="Spanish">Spanish</input>';
-	// radioButtonDisplay += '<input type="radio" name="language" class="Wookie">Wookie</input>';
-	// radioButtonDisplay += '</div>';
-	// languageChooser.innerHTML = radioButtonDisplay;
 }
 
 
