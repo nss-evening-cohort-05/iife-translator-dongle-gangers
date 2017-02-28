@@ -27,6 +27,7 @@ The user interface is minimally styled css.
 - html
 - css
 - javascript
+- [ResponsiveVoice.JS](https://responsivevoice.org/)
 
 
 ### How To View The Language Translator Application

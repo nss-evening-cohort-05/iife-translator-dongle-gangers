@@ -4,7 +4,6 @@
 	flex-direction: column;
 	align-items: center;
 	font-family: Helvetica;
-
 }
 
 body {
@@ -16,6 +15,12 @@ h4 {
 	font-size: 1.5em;
 	font-weight: 700;
 	color: #3E000C;
+}
+
+img {
+	align-content: center;
+	border: solid 3px #3E000C;
+	border-radius: 15%;
 }
 
 p {
@@ -40,7 +45,7 @@ textarea#translatedText {
 	margin: auto;
 }
 
-button {
+button, .audioplay {
 	width: 150px;
 	height: 50px;
 	font-weight: 700;
