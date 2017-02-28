@@ -7,6 +7,7 @@ var translateButton = document.getElementById("translateButton");
 var translator = ["Wookie", "French", "Korean", "Spanish"];
 var translationArray = [];
 var outputString = document.getElementById("translatedText");
+var voicePlay = document.getElementById("audioPlay");
 
 //***************************************
 // function creates output string
@@ -32,7 +33,9 @@ function outputToDOM (str) {
 
 // console.log("str returned from augmentor, to be parsed :: ", str);
 	outputString.innerHTML = str;
-}
+
+	voicePlay.innerHTML = `<input onclick='responsiveVoice.speak("${str}");' type='button' value='Play' />`
+};
 
 
 //***************************************
@@ -70,8 +73,4 @@ translateButton.addEventListener("click", function(event) {
 	if (!translated) {
 		alert("You have to choose a language for translation!");
 	}
-})
-
-
-
-
+});
