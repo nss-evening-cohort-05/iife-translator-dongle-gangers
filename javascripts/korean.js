@@ -8,7 +8,7 @@
     	"just": "다만", 
     	"served": "봉사 한", 
     	"us": "우리", 
-    	"noodles": "국수"
+    	"noodles": "국수 nae aju uahan eommaga ulil seobing haess-eo."
     };
 
 
