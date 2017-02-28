@@ -33,9 +33,13 @@ function outputToDOM (str) {
 
 // console.log("str returned from augmentor, to be parsed :: ", str);
 	outputString.innerHTML = str;
+<<<<<<< HEAD
 	voicePlay.innerHTML = `<input onclick='responsiveVoice.speak("${str}");' type='button' value=' 🔊 Play' class='audioplay' />`
-};
+=======
 
+	voicePlay.innerHTML = `<input onclick='responsiveVoice.speak("${str}");' type='button' value='Play' />`
+>>>>>>> 1c03205a483d3ed15fd92d6b372a58419a905f2e
+};
 
 
 //***************************************
