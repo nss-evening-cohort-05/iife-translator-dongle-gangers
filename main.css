@@ -1,0 +1,52 @@
+.container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	font-family: Helvetica;
+
+}
+
+body {
+	border: solid 5px #084C61;
+	border-radius: 20%;
+}
+
+h4 {
+	font-size: 1.5em;
+	font-weight: 700;
+	color: #3E000C;
+}
+
+p {
+	font-size: 1.25em;
+	color: #084C61;
+	text-indent: 4em;
+}
+
+textarea {
+	width: 275px;
+	height: 50px;
+	border: solid 3px #3E000C;
+	border-radius: 25%;
+	resize: none;
+	background: #EEF4D4;
+	padding: 12px;
+}
+
+textarea#translatedText {
+	color: #586A6A;
+	font: 30px;
+	margin: auto;
+}
+
+button {
+	width: 150px;
+	height: 50px;
+	font-weight: 700;
+	font-size: 1.25em;
+	border-radius: 50%;
+	color: #4C4C47;
+	border: solid 3px #3E000C;
+	background-color: #EA9E8D;
+}
